@@ -1,0 +1,413 @@
+body {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    background-color: #f0f8ff; /* Keyword color aliceblue */
+    margin: 0;
+}
+
+p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    word-spacing: 3px;
+    color:#333;; /* Keyword color darkgray */
+}
+
+/* General background styles */
+.background-container {
+    background-image: url("../images/background-img.jpg");
+    background-color: transparent; /* Used as an alternative if the image cannot be loaded */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat; /* Prevent repetition */
+    padding: 17px; /* Ensure content isn't flush against edges */
+    width: 97%;
+    height: 200px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Headings inside background container */
+.background-container h1, 
+.background-container h2 {
+    margin: 0; /* Removes default margin */
+    text-align: center;
+    position: static; /* Normal positioning */ 
+}
+
+.background-container h1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 100px;
+    text-transform: uppercase;
+    color: #4682b4; /* Keyword color steelblue */
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.background-container h2 {
+    font-family: "Covered By Your Grace", cursive;
+    font-weight: 400;
+    font-size: 63px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(to right, #ff5f6d, #ffc371); /* Applies gradient background (A linear gradient from pinkish-red to light orange) */
+    -webkit-background-clip: text; /* Clips the background to the text */
+    -webkit-text-fill-color: transparent; /* Makes the text fill color transparent*/
+    animation: animateText 3s infinite, animateColor 5s infinite, rotateText 7s infinite; /* Applies multiple animations */
+    margin-bottom: 85px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Keyframes animations for h2 element */
+@keyframes animateText {
+    0% {
+        /* Initial state */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Light shadow*/
+        transform: scale(1); /* Normal size */
+    }
+    50% {
+        /* Midpoint state */
+        text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7); /* Larger, darker shadow */
+        transform: scale(1.05); /* Slightly larger size */
+    }
+    100% {
+        /* Final state, same as initial state to create a loop */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Light shadow */
+        transform: scale(1); /* Normal size */
+    }
+}
+
+@keyframes animateColor {
+    0% { color: #e6e6fa; } /* Initial color / Keyword color lavender */
+    50% { color: #ffb6c1; } /* Midpoint color / Keyword light pink */
+    100% { color: #efe6fa; } /* Final color, same as initial to create a loop */
+}
+
+@keyframes rotateText {
+    0% { transform: rotate(0deg); } /* Initial rotation / No rotation */
+    50% { transform: rotate(3deg); } /* Midpoint rotation / Slightly clockwise rotation */
+    100% { transform: rotate(0deg); } /* Final rotation, same as initial to create a loop / No rotation */
+}
+
+/* General link styles */
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff; 
+}
+
+a:hover {
+    color: #9370db; /* Keyword color mediumpurple */
+}
+
+/* Remove default list styles */
+ul {
+    list-style-type: none; /* Remove default bullets */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Makes ul a flex container to align the li elements horizontally */
+}
+
+/* Flexbox in nav */
+nav {
+    display: flex;
+    justify-content: center; /* Centers the ul horizontally within the nav */
+    align-items: center; /* Centers the ul vertically within the nav */
+    height: 80px;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* General button styles */
+.button {
+    background-color: #708090; /* Keyword color slategray */
+    transition: background-color 0.3s, color 0.3s;
+    border: 2px solid #708090; 
+    border-radius: 5px;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+/* Hover effect */
+.button:hover {
+    color: inherit;
+    background-color: rgba(135, 206, 235, 0.5); /* Keyword color lightskyblue / Hex rgb: #87cefa / Opacity-Alpha value: 50% / 0.5 */
+    border-color: rgba(135, 206, 235, 0.5);
+}
+
+/* Inline-specific style for buttons */
+.button-inline {
+    margin-right: 10px;
+}
+
+/* Last item without margin-right */
+ul li:last-child button.inline {
+    margin-right: 0;
+}
+
+/* Main section styling */
+main {
+    margin: 0px 50px;
+    padding: 8px;
+}
+
+main h3 {
+    margin-top: 0;
+}
+
+#colors h3, 
+#fonts h3, 
+#text-styles h3 {
+    font-size: 32px;
+    color: #006400; /* Keyword color darkgreen */
+    background-color: #f0e68c; /* Keyword color khaki */
+    padding: 10px 15px;
+    border: 10px solid rgba(240, 248, 255, 0.1); /* Aliceblue border with 10% opacity for subtle border effect or overlay */
+    border-radius: 8px;
+}
+
+/* Wrapper for color-box and description */
+.color-box-description {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+}
+
+/* Box styles for color-box */
+.color-box {
+    display: flex;
+    flex-direction: row; /* Display contents inline */
+    align-items: center; /* Align items vertically in the center */
+    justify-content: center; /* Align items horizontally in the center */  
+    border: 2px solid rgba(240, 248, 255, 0.1); /* Aliceblue border with 10% opacity for subtle border effect or overlay */
+    border-radius: 8px;
+    padding: 20px; /* Padding inside the box */
+    margin: 15px 0; /* Margin to separate from surrounding elements */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 265px;
+    margin-right: 20px; /* Space between box and description */
+}
+ 
+.aliceblue p {
+    background-color: #f0f8ff;
+    color: #000080; /* Keyword color navy */
+}
+
+.steelblue {
+    background-color: #4682b4;
+    color: #fff; /* Keyword color white */
+}
+
+/* Use background property for gradient / The background-color property only accepts a single color, not a gradient */
+.gradient {
+    background: linear-gradient(to right, #ff5f6d, #ffc371); 
+    color: #000080;
+}
+
+.darkgreen {
+    background-color: #006400;
+    color: #fff;
+}
+
+.khaki {
+    background-color: #f0e68c;
+    color: #000080;
+}
+
+.darkgray {
+    background-color: #333;
+    color: #fff;
+}
+
+.mediumpurple {
+    background-color: #9370db;
+    color: #fff;
+}
+
+.slategray {
+    background-color: #708090;
+    color: #fff;
+}
+
+.lightskyblue {
+    background-color: #87cefa;
+    color: #000080;
+}
+
+.purple {
+    background-color: #800080;
+    color: #fff;
+}
+
+.lightyellow {
+    background-color: #ffffe0;
+    color: #000080;
+}
+
+.peru {
+    background-color: #cd853f;
+    color: #fff;
+}
+
+.honeydew {
+    background-color: #f0fff0;
+    color: #000080;
+}
+
+/* Remove vertical space for <p> elements */
+.color-box p {
+    margin: 0; /* Remove default margin */ 
+    padding: 0 5px; /* Adds horizontal padding to space out the text within the inline layout */
+    white-space: nowrap; /* Prevent text from wrapping to a new line */
+}
+
+/* Description styling */
+.color-box-wrapper .description {
+    flex: 1; /* Allow description to take up remaining space */
+    text-align: left;
+}
+
+/* Code styling */
+code {
+    color: #800080; /* Keyword color purple */
+    background-color: #ffffe0; /* Keyword color lightyellow */
+}
+
+/* Hex, color model and keyword color styling */
+.hex-color, 
+.keyword-color, 
+.color-model {
+    color: #cd853f; /* Keyword color peru */
+    background-color: #f0fff0; /* Keyword color honeydew */
+}
+
+/* Font styling */
+.font-container {
+    border: 2px solid #a2a2a6; /* Border color shade of gray */
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px 0;
+    margin-bottom: 30px;
+}
+
+.font-container p {
+    margin: 0;
+    padding: 8px;
+}
+
+.typeface {
+    font-size: 20px;
+    font-weight: 400;
+    color: #da70d6; /* Keyword color orchid */
+
+}
+
+.ubuntu, 
+.font-family {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-size: 27px;
+    color: #8b4513; /* Keyword color saddlebrown */
+}
+
+.ubuntu-light-300 {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+}
+
+.ubuntu-regular-400 {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+}
+
+.ubuntu-regular-400-italic {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.ubuntu-medium-500 {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+}
+    
+.poppins, 
+.font-family {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 27px;
+    color: #8b4513;
+}
+
+.poppins-regular-400 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+
+.poppins-medium-500 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+}
+
+.poppins-medium-500-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.poppins-semibold-600 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+}
+
+.covered-by-your-grace-regular-400 {
+    font-family: "Covered By Your Grace", cursive;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+/* Text styling */
+.text-container {
+    border: 2px solid #a2a2a6;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px 0;
+    margin-bottom: 30px;
+}
+
+.text-container p {
+    margin: 0;
+    padding: 8px;
+}
+
+.body-text-style {
+    font-size: 27px;
+    font-weight: 400;
+    color: #8b4513;
+}
+
+.header-text-style {
+    font-size: 27px;
+    font-weight: 400;
+    color: #8b4513;
+}
+
+.p-text-style {
+    font-size: 27px;
+    font-weight: 400;
+    color: #8b4513;
+}
+
+em {
+    color: #bc8f8f; /* Keyword color rosybrown */
+    font-size: 20px;
+}
