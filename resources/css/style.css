@@ -16,7 +16,7 @@ p {
 
 /* General background styles */
 .background-container {
-    background-image: url("../images/background-img.jpg");
+    background-image: url("../images/BackGround-Img.jpg");
     background-color: transparent; /* Used as an alternative if the image cannot be loaded */
     background-size: cover;
     background-position: center center;
